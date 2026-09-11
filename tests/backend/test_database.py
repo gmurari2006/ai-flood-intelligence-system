@@ -147,3 +147,27 @@ async def test_health_endpoint_db_detection():
     data = response.json()
     assert "database" in data
     assert data["database"]["status"] in ["CONNECTED", "UNAVAILABLE"]
+
+
+def test_database_url_normalization():
+    """DB-TEST-08: Verify DATABASE_URL driver normalization for asyncpg."""
+    from app.core.config import Settings
+    from sqlalchemy.ext.asyncio import create_async_engine
+
+    # 1. postgres:// scheme normalization
+    s1 = Settings(DATABASE_URL="postgres://user:pass@localhost:5432/testdb")
+    assert s1.DATABASE_URL == "postgresql+asyncpg://user:pass@localhost:5432/testdb"
+
+    # 2. postgresql:// scheme normalization
+    s2 = Settings(DATABASE_URL="postgresql://user:pass@localhost:5432/testdb")
+    assert s2.DATABASE_URL == "postgresql+asyncpg://user:pass@localhost:5432/testdb"
+
+    # 3. postgresql+asyncpg:// scheme preserved
+    s3 = Settings(DATABASE_URL="postgresql+asyncpg://user:pass@localhost:5432/testdb")
+    assert s3.DATABASE_URL == "postgresql+asyncpg://user:pass@localhost:5432/testdb"
+
+    # 4. Engine creation with normalized URL uses asyncpg dialect without psycopg2
+    engine = create_async_engine(s1.DATABASE_URL)
+    assert engine.dialect.name == "postgresql"
+    assert engine.dialect.driver == "asyncpg"
+    engine.sync_engine.dispose()
