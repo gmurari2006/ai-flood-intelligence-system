@@ -11,10 +11,10 @@ from fastapi import APIRouter, Depends, Query, Response
 from fastapi.responses import PlainTextResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.api.deps import get_db, get_current_user
-from backend.app.models.domain import User
-from backend.app.schemas.analytics import HistoricalAnalyticsResponse, DataExportResponse
-from backend.app.services.analytics_service import AnalyticsService
+from app.api.deps import get_db, get_current_user
+from app.models.domain import User
+from app.schemas.analytics import HistoricalAnalyticsResponse, DataExportResponse
+from app.services.analytics_service import AnalyticsService
 
 router = APIRouter()
 

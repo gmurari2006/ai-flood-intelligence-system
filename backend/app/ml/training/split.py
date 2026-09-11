@@ -10,7 +10,7 @@ from typing import NamedTuple, Optional
 import numpy as np
 from pydantic import BaseModel, Field
 
-from backend.app.ml.training.dataset import TrainingDataset, ClassDistribution
+from app.ml.training.dataset import TrainingDataset, ClassDistribution
 
 
 class TemporalLeakageError(Exception):

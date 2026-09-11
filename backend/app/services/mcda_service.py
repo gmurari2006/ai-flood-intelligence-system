@@ -10,7 +10,7 @@ from typing import List, Optional
 from sqlalchemy import select, func, desc
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.domain import (
+from app.models.domain import (
     GeographicZone,
     PredictionRun,
     RiskScore,
@@ -18,7 +18,7 @@ from backend.app.models.domain import (
     InfrastructureAsset,
     WaterLevelObservation,
 )
-from backend.app.schemas.mcda import (
+from app.schemas.mcda import (
     MCDAWeightsConfig,
     MCDAFactorBreakdown,
     ZonePriorityRank,

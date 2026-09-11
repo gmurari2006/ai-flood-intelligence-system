@@ -12,29 +12,29 @@ import numpy as np
 import pytest
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.ml.schemas import MLFeatureVector
-from backend.app.ml.training.dataset import (
+from app.ml.schemas import MLFeatureVector
+from app.ml.training.dataset import (
     TrainingSample,
     TrainingDataset,
     TrainingDatasetBuilder,
     InsufficientTrainingDataError,
     ClassDistribution,
 )
-from backend.app.ml.training.split import (
+from app.ml.training.split import (
     ChronologicalSplitter,
     TemporalLeakageError,
 )
-from backend.app.ml.training.preprocessing import PreprocessingPipeline
-from backend.app.ml.training.model_interface import (
+from app.ml.training.preprocessing import PreprocessingPipeline
+from app.ml.training.model_interface import (
     ModelConfig,
     ModelArchitectureEnum,
     ThresholdTuner,
 )
-from backend.app.ml.training.evaluator import (
+from app.ml.training.evaluator import (
     ModelEvaluationInterface,
     EvaluationMetrics,
 )
-from backend.app.ml.training.artifacts import (
+from app.ml.training.artifacts import (
     ModelMetadata,
     ModelArtifactBundle,
     ModelArtifactManager,
@@ -249,7 +249,7 @@ def test_model_12_confusion_matrix_and_error_analysis_correct():
 @pytest.mark.asyncio
 async def test_model_13_insufficient_real_data_detected_and_blocks_training():
     """MODEL-TEST-13: Real database inspection detects 0 events and raises InsufficientTrainingDataError."""
-    from backend.app.db.session import AsyncSessionLocal
+    from app.db.session import AsyncSessionLocal
     async with AsyncSessionLocal() as session:
         inspection = await TrainingDatasetBuilder.inspect_real_data_availability(session)
         assert inspection["training_ready"] is False

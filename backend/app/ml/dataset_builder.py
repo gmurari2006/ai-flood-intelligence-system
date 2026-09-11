@@ -10,15 +10,15 @@ from typing import Optional, Sequence
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.logging import logger
-from backend.app.models.domain import (
+from app.core.logging import logger
+from app.models.domain import (
     GeographicZone,
     WeatherObservation,
     RainfallObservation,
     WaterLevelObservation,
 )
-from backend.app.ml.alignment import filter_observations_before_cutoff, ensure_naive_datetime, DataLeakageError
-from backend.app.ml.engineer import (
+from app.ml.alignment import filter_observations_before_cutoff, ensure_naive_datetime, DataLeakageError
+from app.ml.engineer import (
     calculate_antecedent_precipitation_index,
     calculate_runoff_potential_index,
     calculate_hydro_danger_index_clamped,
@@ -26,7 +26,7 @@ from backend.app.ml.engineer import (
     calculate_river_stage_ratio,
     FeatureExtractionError,
 )
-from backend.app.ml.schemas import MLFeatureVector
+from app.ml.schemas import MLFeatureVector
 
 
 class FeatureDatasetBuilder:

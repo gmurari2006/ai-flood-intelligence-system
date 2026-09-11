@@ -10,10 +10,10 @@ import pytest
 from httpx import AsyncClient, ASGITransport
 from sqlalchemy import text
 
-from backend.app.main import app
-from backend.app.db.session import AsyncSessionLocal
-from backend.app.core.security import get_password_hash
-from backend.app.models.domain import User, UserRole, Location, GeographicZone
+from app.main import app
+from app.db.session import AsyncSessionLocal
+from app.core.security import get_password_hash
+from app.models.domain import User, UserRole, Location, GeographicZone
 
 
 async def setup_test_environment():

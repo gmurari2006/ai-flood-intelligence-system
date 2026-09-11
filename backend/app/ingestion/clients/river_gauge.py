@@ -6,9 +6,9 @@ Fetches/parses hydrodynamic river gauge observations.
 
 from datetime import datetime, timezone
 from typing import Optional
-from backend.app.core.logging import logger
-from backend.app.ingestion.base import BaseProvider, ProviderPayload, ProviderIngestionError
-from backend.app.schemas.ingestion import WaterLevelObservationCreate
+from app.core.logging import logger
+from app.ingestion.base import BaseProvider, ProviderPayload, ProviderIngestionError
+from app.schemas.ingestion import WaterLevelObservationCreate
 
 
 class RiverGaugeClient(BaseProvider):

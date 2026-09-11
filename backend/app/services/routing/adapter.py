@@ -7,8 +7,8 @@ Matches Document 02 Section 5.1 & Hard Governance Rules.
 
 from abc import ABC, abstractmethod
 from typing import Optional
-from backend.app.schemas.evacuation import RouteDetails
-from backend.app.services.routing.engine import RoutingGraph, GraphRoutingEngine
+from app.schemas.evacuation import RouteDetails
+from app.services.routing.engine import RoutingGraph, GraphRoutingEngine
 
 
 class BaseRoutingProvider(ABC):

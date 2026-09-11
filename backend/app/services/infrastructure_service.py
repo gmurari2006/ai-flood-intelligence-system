@@ -9,7 +9,7 @@ from typing import Optional
 from sqlalchemy import select, func, desc
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.domain import (
+from app.models.domain import (
     InfrastructureAsset,
     InfrastructureRisk,
     GeographicZone,
@@ -17,11 +17,11 @@ from backend.app.models.domain import (
     FloodPrediction,
     RiskScore,
 )
-from backend.app.schemas.infrastructure import (
+from app.schemas.infrastructure import (
     InfrastructureAssetResponse,
     VulnerableInfrastructureListResponse,
 )
-from backend.app.schemas.zones import CentroidSchema
+from app.schemas.zones import CentroidSchema
 
 
 class InfrastructureService:

@@ -2,8 +2,8 @@
 Pydantic Schemas Package.
 """
 
-from backend.app.schemas.health import SystemHealthResponse, ComponentStatus
-from backend.app.schemas.ingestion import (
+from app.schemas.health import SystemHealthResponse, ComponentStatus
+from app.schemas.ingestion import (
     DataSourceCreate,
     DataSourceResponse,
     WeatherObservationCreate,
@@ -16,34 +16,34 @@ from backend.app.schemas.ingestion import (
     ZoneWaterLevelViewResponse,
     IngestionResult,
 )
-from backend.app.schemas.auth import (
+from app.schemas.auth import (
     LoginRequest,
     UserOut,
     TokenResponse,
 )
-from backend.app.schemas.zones import (
+from app.schemas.zones import (
     CentroidSchema,
     ZoneSummarySchema,
     ZoneListResponse,
 )
-from backend.app.schemas.predictions import (
+from app.schemas.predictions import (
     PredictionRequest,
     PredictionResponse,
 )
-from backend.app.schemas.xai import (
+from app.schemas.xai import (
     RiskFactorSchema,
     PredictionExplainResponse,
 )
-from backend.app.schemas.gis import (
+from app.schemas.gis import (
     GeoJSONGeometry,
     GeoJSONFeature,
     GeoJSONFeatureCollection,
 )
-from backend.app.schemas.infrastructure import (
+from app.schemas.infrastructure import (
     InfrastructureAssetResponse,
     VulnerableInfrastructureListResponse,
 )
-from backend.app.schemas.evacuation import (
+from app.schemas.evacuation import (
     EvacuationShelterSummary,
     EvacuationShelterListResponse,
     EvacuationRoutePlanRequest,
@@ -51,7 +51,7 @@ from backend.app.schemas.evacuation import (
     RouteDetails,
     RoutePathGeoJSON,
 )
-from backend.app.schemas.alerts import (
+from app.schemas.alerts import (
     AlertCreateRequest,
     AlertCreateResponse,
     AlertSummaryResponse,
@@ -61,13 +61,13 @@ from backend.app.schemas.alerts import (
     PublicWarningItem,
     PublicWarningsResponse,
 )
-from backend.app.schemas.mcda import (
+from app.schemas.mcda import (
     MCDAWeightsConfig,
     MCDAFactorBreakdown,
     ZonePriorityRank,
     AlertPrioritizationResponse,
 )
-from backend.app.schemas.analytics import (
+from app.schemas.analytics import (
     HistoricalFloodEventItem,
     HistoricalAnalyticsResponse,
     DataExportResponse,

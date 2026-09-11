@@ -10,15 +10,15 @@ from typing import Optional, Sequence
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.logging import logger
-from backend.app.models.domain import (
+from app.core.logging import logger
+from app.models.domain import (
     DataSource,
     WeatherObservation,
     RainfallObservation,
     WaterLevelObservation,
     GeographicZone,
 )
-from backend.app.schemas.ingestion import (
+from app.schemas.ingestion import (
     WeatherObservationCreate,
     RainfallObservationCreate,
     WaterLevelObservationCreate,
@@ -29,7 +29,7 @@ from backend.app.schemas.ingestion import (
     ZoneWaterLevelViewResponse,
     IngestionResult,
 )
-from backend.app.ingestion.base import BaseProvider, ProviderIngestionError
+from app.ingestion.base import BaseProvider, ProviderIngestionError
 
 
 class IngestionService:

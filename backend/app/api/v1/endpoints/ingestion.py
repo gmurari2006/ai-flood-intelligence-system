@@ -6,11 +6,11 @@ from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db.session import get_db
-from backend.app.schemas.ingestion import DataSourceResponse, IngestionResult
-from backend.app.services.ingestion_service import IngestionService
-from backend.app.ingestion.clients import OpenMeteoClient, RiverGaugeClient
-from backend.app.core.logging import logger
+from app.db.session import get_db
+from app.schemas.ingestion import DataSourceResponse, IngestionResult
+from app.services.ingestion_service import IngestionService
+from app.ingestion.clients import OpenMeteoClient, RiverGaugeClient
+from app.core.logging import logger
 
 router = APIRouter()
 

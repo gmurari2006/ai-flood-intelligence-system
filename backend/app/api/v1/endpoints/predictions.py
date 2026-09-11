@@ -8,13 +8,13 @@ matching Document 05 Section 5.1 & 5.2.
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.logging import logger
-from backend.app.db.session import get_db
-from backend.app.schemas.predictions import PredictionRequest, PredictionResponse
-from backend.app.schemas.xai import PredictionExplainResponse
-from backend.app.services.prediction_service import PredictionService
-from backend.app.api.deps import get_current_user
-from backend.app.models.domain import User
+from app.core.logging import logger
+from app.db.session import get_db
+from app.schemas.predictions import PredictionRequest, PredictionResponse
+from app.schemas.xai import PredictionExplainResponse
+from app.services.prediction_service import PredictionService
+from app.api.deps import get_current_user
+from app.models.domain import User
 
 router = APIRouter()
 

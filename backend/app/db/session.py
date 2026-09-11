@@ -6,7 +6,7 @@ Configures asynchronous SQLAlchemy engine and session factory.
 
 from typing import AsyncGenerator
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
-from backend.app.core.config import settings
+from app.core.config import settings
 
 # Configure async engine for PostgreSQL + PostGIS via asyncpg
 engine = create_async_engine(

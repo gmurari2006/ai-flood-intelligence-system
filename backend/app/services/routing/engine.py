@@ -8,7 +8,7 @@ Matches Document 02 Section 5.1 & Document 05 Section 8.1 (FR-08).
 import math
 import heapq
 from typing import Dict, List, Optional, Tuple, Any
-from backend.app.schemas.evacuation import RouteDetails, RoutePathGeoJSON
+from app.schemas.evacuation import RouteDetails, RoutePathGeoJSON
 
 
 def haversine_distance_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:

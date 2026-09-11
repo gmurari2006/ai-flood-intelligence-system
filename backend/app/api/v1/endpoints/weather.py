@@ -8,10 +8,10 @@ from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db.session import get_db
-from backend.app.schemas.ingestion import ZoneWeatherViewResponse, RainfallMetricsSchema
-from backend.app.services.ingestion_service import IngestionService
-from backend.app.core.logging import logger
+from app.db.session import get_db
+from app.schemas.ingestion import ZoneWeatherViewResponse, RainfallMetricsSchema
+from app.services.ingestion_service import IngestionService
+from app.core.logging import logger
 
 router = APIRouter()
 
@@ -27,7 +27,7 @@ async def get_zone_weather(
     db: AsyncSession = Depends(get_db)
 ) -> ZoneWeatherViewResponse:
     """Fetch latest weather & rainfall observations for a zone."""
-    from backend.app.services.zone_service import ZoneService
+    from app.services.zone_service import ZoneService
     zone = await ZoneService.get_zone_by_id(db, zone_id)
     if not zone:
         raise HTTPException(

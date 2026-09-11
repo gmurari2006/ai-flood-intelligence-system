@@ -2,10 +2,10 @@
 AI/ML Data Preparation and Feature Engineering Package.
 """
 
-from backend.app.ml.metadata import FEATURE_REGISTRY, FeatureMetadata
-from backend.app.ml.schemas import MLFeatureVector, HistoricalTargetRecord, FeatureDatasetRecord
-from backend.app.ml.alignment import filter_observations_before_cutoff, DataLeakageError
-from backend.app.ml.engineer import (
+from app.ml.metadata import FEATURE_REGISTRY, FeatureMetadata
+from app.ml.schemas import MLFeatureVector, HistoricalTargetRecord, FeatureDatasetRecord
+from app.ml.alignment import filter_observations_before_cutoff, DataLeakageError
+from app.ml.engineer import (
     calculate_antecedent_precipitation_index,
     calculate_runoff_potential_index,
     calculate_hydro_danger_index_clamped,
@@ -13,8 +13,8 @@ from backend.app.ml.engineer import (
     calculate_river_stage_ratio,
     FeatureExtractionError,
 )
-from backend.app.ml.dataset_builder import FeatureDatasetBuilder
-from backend.app.ml.target_interface import HistoricalTargetInterface, TargetDatasetError
+from app.ml.dataset_builder import FeatureDatasetBuilder
+from app.ml.target_interface import HistoricalTargetInterface, TargetDatasetError
 
 __all__ = [
     "FEATURE_REGISTRY",

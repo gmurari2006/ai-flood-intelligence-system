@@ -8,9 +8,9 @@ from typing import Optional
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.api.deps import get_db
-from backend.app.schemas.gis import GeoJSONFeatureCollection
-from backend.app.services.gis_service import GISService
+from app.api.deps import get_db
+from app.schemas.gis import GeoJSONFeatureCollection
+from app.services.gis_service import GISService
 
 router = APIRouter()
 

@@ -12,7 +12,7 @@ from typing import Any, Dict, List, Optional
 from sqlalchemy import select, desc
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.domain import (
+from app.models.domain import (
     HistoricalFloodEvent,
     PredictionRun,
     FloodPrediction,
@@ -21,7 +21,7 @@ from backend.app.models.domain import (
     InfrastructureAsset,
     GeographicZone,
 )
-from backend.app.schemas.analytics import (
+from app.schemas.analytics import (
     HistoricalFloodEventItem,
     HistoricalAnalyticsResponse,
     DataExportResponse,

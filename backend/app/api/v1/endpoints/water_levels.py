@@ -7,10 +7,10 @@ Implements GET /api/v1/water-levels/{zone_id} matching Document 05 Section 4.2.
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db.session import get_db
-from backend.app.schemas.ingestion import ZoneWaterLevelViewResponse
-from backend.app.services.ingestion_service import IngestionService
-from backend.app.core.logging import logger
+from app.db.session import get_db
+from app.schemas.ingestion import ZoneWaterLevelViewResponse
+from app.services.ingestion_service import IngestionService
+from app.core.logging import logger
 
 router = APIRouter()
 
@@ -26,7 +26,7 @@ async def get_zone_water_levels(
     db: AsyncSession = Depends(get_db)
 ) -> ZoneWaterLevelViewResponse:
     """Fetch latest river water level observation for a zone."""
-    from backend.app.services.zone_service import ZoneService
+    from app.services.zone_service import ZoneService
     from fastapi import HTTPException, status
     zone = await ZoneService.get_zone_by_id(db, zone_id)
     if not zone:

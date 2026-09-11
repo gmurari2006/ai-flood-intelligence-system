@@ -5,7 +5,7 @@ Aggregates all v1 endpoint sub-routers.
 """
 
 from fastapi import APIRouter
-from backend.app.api.v1.endpoints import (
+from app.api.v1.endpoints import (
     health,
     auth,
     zones,

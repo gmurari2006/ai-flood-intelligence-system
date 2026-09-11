@@ -12,14 +12,14 @@ from fastapi import HTTPException, status
 from sqlalchemy import select, func, update, desc
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.domain import (
+from app.models.domain import (
     Alert,
     AlertRecipient,
     SystemEvent,
     GeographicZone,
     User,
 )
-from backend.app.schemas.alerts import (
+from app.schemas.alerts import (
     AlertCreateRequest,
     AlertCreateResponse,
     AlertSummaryResponse,

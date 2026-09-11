@@ -12,10 +12,10 @@ from pydantic import BaseModel, Field, ConfigDict
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.logging import logger
-from backend.app.ml.schemas import MLFeatureVector, HistoricalTargetRecord
-from backend.app.ml.alignment import ensure_naive_datetime, DataLeakageError
-from backend.app.models.domain import HistoricalFloodEvent
+from app.core.logging import logger
+from app.ml.schemas import MLFeatureVector, HistoricalTargetRecord
+from app.ml.alignment import ensure_naive_datetime, DataLeakageError
+from app.models.domain import HistoricalFloodEvent
 
 
 class InsufficientTrainingDataError(Exception):

@@ -10,15 +10,15 @@ from typing import Optional
 from sqlalchemy import select, func, desc
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.domain import EvacuationCenter
-from backend.app.schemas.evacuation import (
+from app.models.domain import EvacuationCenter
+from app.schemas.evacuation import (
     EvacuationShelterSummary,
     EvacuationShelterListResponse,
     EvacuationRoutePlanResponse,
     RouteDetails,
 )
-from backend.app.schemas.zones import CentroidSchema
-from backend.app.services.routing.adapter import BaseRoutingProvider, NullRoutingProvider
+from app.schemas.zones import CentroidSchema
+from app.services.routing.adapter import BaseRoutingProvider, NullRoutingProvider
 
 
 class EvacuationService:

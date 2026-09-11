@@ -12,10 +12,10 @@ from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.config import settings
-from backend.app.core.security import decode_access_token
-from backend.app.db.session import AsyncSessionLocal
-from backend.app.models.domain import User, UserRole
+from app.core.config import settings
+from app.core.security import decode_access_token
+from app.db.session import AsyncSessionLocal
+from app.models.domain import User, UserRole
 
 
 oauth2_scheme = OAuth2PasswordBearer(

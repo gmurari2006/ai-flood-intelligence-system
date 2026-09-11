@@ -6,10 +6,10 @@ Fetches real meteorological observations (weather, rainfall) from Open-Meteo RES
 
 from datetime import datetime, timezone
 import httpx
-from backend.app.core.config import settings
-from backend.app.core.logging import logger
-from backend.app.ingestion.base import BaseProvider, ProviderPayload, ProviderIngestionError
-from backend.app.schemas.ingestion import WeatherObservationCreate, RainfallObservationCreate
+from app.core.config import settings
+from app.core.logging import logger
+from app.ingestion.base import BaseProvider, ProviderPayload, ProviderIngestionError
+from app.schemas.ingestion import WeatherObservationCreate, RainfallObservationCreate
 
 
 class OpenMeteoClient(BaseProvider):

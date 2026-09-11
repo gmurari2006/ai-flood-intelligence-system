@@ -6,7 +6,7 @@ Provides standard structured application logging distinguishing INFO, WARNING, a
 
 import logging
 import sys
-from backend.app.core.config import settings
+from app.core.config import settings
 
 
 def setup_logging() -> logging.Logger:

@@ -11,13 +11,13 @@ import pytest
 from httpx import AsyncClient, ASGITransport
 from sqlalchemy import text
 
-from backend.app.main import app
-from backend.app.db.session import AsyncSessionLocal
-from backend.app.core.security import get_password_hash
-from backend.app.models.domain import User, UserRole, Location, GeographicZone, InfrastructureAsset, EvacuationCenter, HistoricalFloodEvent
-from backend.app.services.routing.engine import RoutingGraph
-from backend.app.services.routing.adapter import GraphRoutingProvider, NullRoutingProvider
-from backend.app.services.evacuation_service import EvacuationService
+from app.main import app
+from app.db.session import AsyncSessionLocal
+from app.core.security import get_password_hash
+from app.models.domain import User, UserRole, Location, GeographicZone, InfrastructureAsset, EvacuationCenter, HistoricalFloodEvent
+from app.services.routing.engine import RoutingGraph
+from app.services.routing.adapter import GraphRoutingProvider, NullRoutingProvider
+from app.services.evacuation_service import EvacuationService
 
 
 async def setup_module6_fixtures():

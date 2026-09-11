@@ -11,7 +11,7 @@ from typing import Optional
 from sqlalchemy import select, func, desc
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.domain import (
+from app.models.domain import (
     GeographicZone,
     PredictionRun,
     FloodPrediction,
@@ -21,7 +21,7 @@ from backend.app.models.domain import (
     WaterLevelObservation,
     RainfallObservation,
 )
-from backend.app.schemas.gis import (
+from app.schemas.gis import (
     GeoJSONFeatureCollection,
     GeoJSONFeature,
     GeoJSONGeometry,

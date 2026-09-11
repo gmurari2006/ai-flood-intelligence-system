@@ -10,8 +10,8 @@ import pytest
 from pydantic import ValidationError
 from sqlalchemy import text, select
 
-from backend.app.db.session import AsyncSessionLocal
-from backend.app.models.domain import (
+from app.db.session import AsyncSessionLocal
+from app.models.domain import (
     Location,
     GeographicZone,
     DataSource,
@@ -19,13 +19,13 @@ from backend.app.models.domain import (
     RainfallObservation,
     WaterLevelObservation,
 )
-from backend.app.schemas.ingestion import (
+from app.schemas.ingestion import (
     WeatherObservationCreate,
     RainfallObservationCreate,
     WaterLevelObservationCreate,
 )
-from backend.app.services.ingestion_service import IngestionService
-from backend.app.ingestion.base import BaseProvider, ProviderPayload, ProviderIngestionError
+from app.services.ingestion_service import IngestionService
+from app.ingestion.base import BaseProvider, ProviderPayload, ProviderIngestionError
 
 
 import time

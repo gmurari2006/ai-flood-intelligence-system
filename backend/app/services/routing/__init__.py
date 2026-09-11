@@ -2,12 +2,12 @@
 Evacuation Routing Package.
 """
 
-from backend.app.services.routing.engine import (
+from app.services.routing.engine import (
     RoutingGraph,
     GraphRoutingEngine,
     haversine_distance_km,
 )
-from backend.app.services.routing.adapter import (
+from app.services.routing.adapter import (
     BaseRoutingProvider,
     NullRoutingProvider,
     GraphRoutingProvider,

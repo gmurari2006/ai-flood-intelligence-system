@@ -6,7 +6,7 @@ Defines the interface for external environmental data providers.
 
 from abc import ABC, abstractmethod
 from typing import NamedTuple, Optional
-from backend.app.schemas.ingestion import (
+from app.schemas.ingestion import (
     WeatherObservationCreate,
     RainfallObservationCreate,
     WaterLevelObservationCreate,

@@ -11,10 +11,10 @@ import uuid
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.logging import logger
-from backend.app.ml.dataset_builder import FeatureDatasetBuilder
-from backend.app.ml.schemas import MLFeatureVector
-from backend.app.models.domain import (
+from app.core.logging import logger
+from app.ml.dataset_builder import FeatureDatasetBuilder
+from app.ml.schemas import MLFeatureVector
+from app.models.domain import (
     GeographicZone,
     ModelVersion,
     PredictionRun,
@@ -22,8 +22,8 @@ from backend.app.models.domain import (
     RiskScore,
     RiskFactor,
 )
-from backend.app.schemas.predictions import PredictionResponse
-from backend.app.schemas.xai import PredictionExplainResponse, RiskFactorSchema
+from app.schemas.predictions import PredictionResponse
+from app.schemas.xai import PredictionExplainResponse, RiskFactorSchema
 
 
 class PredictionService:

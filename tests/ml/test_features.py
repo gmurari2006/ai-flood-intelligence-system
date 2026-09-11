@@ -10,8 +10,8 @@ import pytest
 from pydantic import ValidationError
 from sqlalchemy import text
 
-from backend.app.db.session import AsyncSessionLocal
-from backend.app.models.domain import (
+from app.db.session import AsyncSessionLocal
+from app.models.domain import (
     Location,
     GeographicZone,
     DataSource,
@@ -19,8 +19,8 @@ from backend.app.models.domain import (
     RainfallObservation,
     WaterLevelObservation,
 )
-from backend.app.ml.schemas import MLFeatureVector
-from backend.app.ml.engineer import (
+from app.ml.schemas import MLFeatureVector
+from app.ml.engineer import (
     calculate_antecedent_precipitation_index,
     calculate_runoff_potential_index,
     calculate_hydro_danger_index_clamped,
@@ -28,13 +28,13 @@ from backend.app.ml.engineer import (
     calculate_river_stage_ratio,
     FeatureExtractionError,
 )
-from backend.app.ml.alignment import (
+from app.ml.alignment import (
     filter_observations_before_cutoff,
     calculate_window_accumulated_rainfall,
     DataLeakageError,
 )
-from backend.app.ml.dataset_builder import FeatureDatasetBuilder
-from backend.app.ml.target_interface import HistoricalTargetInterface
+from app.ml.dataset_builder import FeatureDatasetBuilder
+from app.ml.target_interface import HistoricalTargetInterface
 
 
 def get_naive_now() -> datetime:

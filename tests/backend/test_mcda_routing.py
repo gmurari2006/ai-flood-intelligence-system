@@ -9,12 +9,12 @@ import pytest
 from datetime import datetime, timezone
 from sqlalchemy import text
 
-from backend.app.db.session import AsyncSessionLocal
-from backend.app.schemas.mcda import MCDAWeightsConfig
-from backend.app.services.mcda_service import MCDAPrioritizationService
-from backend.app.services.routing.engine import RoutingGraph, GraphRoutingEngine, haversine_distance_km
-from backend.app.services.routing.adapter import GraphRoutingProvider, NullRoutingProvider
-from backend.app.models.domain import GeographicZone, Location, PredictionRun, ModelVersion, RiskScore, FloodPrediction, InfrastructureAsset
+from app.db.session import AsyncSessionLocal
+from app.schemas.mcda import MCDAWeightsConfig
+from app.services.mcda_service import MCDAPrioritizationService
+from app.services.routing.engine import RoutingGraph, GraphRoutingEngine, haversine_distance_km
+from app.services.routing.adapter import GraphRoutingProvider, NullRoutingProvider
+from app.models.domain import GeographicZone, Location, PredictionRun, ModelVersion, RiskScore, FloodPrediction, InfrastructureAsset
 
 
 async def seed_mcda_test_data():

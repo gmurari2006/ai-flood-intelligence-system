@@ -7,10 +7,10 @@ Implements POST /api/v1/auth/login matching Document 05 Section 2.1 (FR-01, NFR-
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db.session import get_db
-from backend.app.schemas.auth import LoginRequest, TokenResponse
-from backend.app.services.auth_service import AuthService
-from backend.app.core.logging import logger
+from app.db.session import get_db
+from app.schemas.auth import LoginRequest, TokenResponse
+from app.services.auth_service import AuthService
+from app.core.logging import logger
 
 router = APIRouter()
 

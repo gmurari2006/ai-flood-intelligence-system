@@ -2,7 +2,7 @@
 Database ORM Models Package.
 """
 
-from backend.app.models.domain import (
+from app.models.domain import (
     Location,
     GeographicZone,
     DataSource,

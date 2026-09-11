@@ -8,10 +8,10 @@ from typing import Optional
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.api.deps import get_db, get_current_user
-from backend.app.models.domain import User
-from backend.app.schemas.infrastructure import VulnerableInfrastructureListResponse
-from backend.app.services.infrastructure_service import InfrastructureService
+from app.api.deps import get_db, get_current_user
+from app.models.domain import User
+from app.schemas.infrastructure import VulnerableInfrastructureListResponse
+from app.services.infrastructure_service import InfrastructureService
 
 router = APIRouter()
 

@@ -8,8 +8,8 @@ from typing import Optional
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.domain import GeographicZone
-from backend.app.schemas.zones import ZoneListResponse, ZoneSummarySchema, CentroidSchema
+from app.models.domain import GeographicZone
+from app.schemas.zones import ZoneListResponse, ZoneSummarySchema, CentroidSchema
 
 
 class ZoneService:

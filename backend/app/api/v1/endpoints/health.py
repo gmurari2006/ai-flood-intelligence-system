@@ -9,9 +9,9 @@ from datetime import datetime, timezone
 import time
 from fastapi import APIRouter
 from sqlalchemy import text
-from backend.app.db.session import engine
-from backend.app.schemas.health import SystemHealthResponse, ComponentStatus
-from backend.app.core.logging import logger
+from app.db.session import engine
+from app.schemas.health import SystemHealthResponse, ComponentStatus
+from app.core.logging import logger
 
 router = APIRouter()
 

@@ -8,9 +8,9 @@ from typing import Optional
 from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.api.deps import get_db, get_current_user, require_role
-from backend.app.models.domain import User
-from backend.app.schemas.alerts import (
+from app.api.deps import get_db, get_current_user, require_role
+from app.models.domain import User
+from app.schemas.alerts import (
     AlertCreateRequest,
     AlertCreateResponse,
     AlertListResponse,
@@ -18,12 +18,12 @@ from backend.app.schemas.alerts import (
     AlertOverrideResponse,
     PublicWarningsResponse,
 )
-from backend.app.schemas.mcda import (
+from app.schemas.mcda import (
     AlertPrioritizationResponse,
     MCDAWeightsConfig,
 )
-from backend.app.services.alert_service import AlertService
-from backend.app.services.mcda_service import MCDAPrioritizationService
+from app.services.alert_service import AlertService
+from app.services.mcda_service import MCDAPrioritizationService
 
 router = APIRouter()
 

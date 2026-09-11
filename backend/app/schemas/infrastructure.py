@@ -6,7 +6,7 @@ Matches Document 05 Section 7.1 (FR-07, AI-09).
 
 from typing import List, Optional
 from pydantic import BaseModel, Field
-from backend.app.schemas.zones import CentroidSchema
+from app.schemas.zones import CentroidSchema
 
 
 class InfrastructureAssetResponse(BaseModel):

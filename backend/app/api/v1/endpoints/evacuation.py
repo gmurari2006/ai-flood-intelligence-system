@@ -9,13 +9,13 @@ from typing import Optional
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db.session import get_db
-from backend.app.schemas.evacuation import (
+from app.db.session import get_db
+from app.schemas.evacuation import (
     EvacuationShelterListResponse,
     EvacuationRoutePlanRequest,
     EvacuationRoutePlanResponse,
 )
-from backend.app.services.evacuation_service import EvacuationService
+from app.services.evacuation_service import EvacuationService
 
 router = APIRouter()
 

@@ -7,9 +7,9 @@ Implements GET /api/v1/zones matching Document 05 Section 3.1 (FR-02, FR-05).
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.db.session import get_db
-from backend.app.schemas.zones import ZoneListResponse
-from backend.app.services.zone_service import ZoneService
+from app.db.session import get_db
+from app.schemas.zones import ZoneListResponse
+from app.services.zone_service import ZoneService
 
 router = APIRouter()
 

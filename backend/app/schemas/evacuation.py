@@ -6,7 +6,7 @@ Matches Document 05 Section 8.1 & 8.2 (FR-08, FR-10).
 
 from typing import Any, Dict, List, Literal, Optional
 from pydantic import BaseModel, Field
-from backend.app.schemas.zones import CentroidSchema
+from app.schemas.zones import CentroidSchema
 
 
 class EvacuationShelterSummary(BaseModel):

@@ -13,8 +13,8 @@ from typing import Any, Optional
 import joblib
 from pydantic import BaseModel, Field, ConfigDict
 
-from backend.app.ml.training.preprocessing import PreprocessingPipeline
-from backend.app.ml.training.evaluator import EvaluationMetrics
+from app.ml.training.preprocessing import PreprocessingPipeline
+from app.ml.training.evaluator import EvaluationMetrics
 
 
 class ModelMetadata(BaseModel):

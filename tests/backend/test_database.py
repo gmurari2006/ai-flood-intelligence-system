@@ -7,8 +7,8 @@ Tests DB-TEST-01 through DB-TEST-07 validating PostgreSQL + PostGIS integration.
 import pytest
 from sqlalchemy import text
 from httpx import AsyncClient, ASGITransport
-from backend.app.db.session import engine, AsyncSessionLocal
-from backend.app.main import app
+from app.db.session import engine, AsyncSessionLocal
+from app.main import app
 
 
 _db_connected_cache: bool | None = None

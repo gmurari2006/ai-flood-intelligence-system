@@ -10,9 +10,9 @@ from typing import Optional
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.logging import logger
-from backend.app.models.domain import HistoricalFloodEvent
-from backend.app.ml.schemas import HistoricalTargetRecord
+from app.core.logging import logger
+from app.models.domain import HistoricalFloodEvent
+from app.ml.schemas import HistoricalTargetRecord
 
 
 class TargetDatasetError(Exception):
